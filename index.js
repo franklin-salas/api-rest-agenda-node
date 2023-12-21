@@ -24,6 +24,9 @@ app.use(express.json());
 
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/event', require('./routes/event'));
+app.get('*',(req,res) => {
+			res.senFile(__dirname + '/public/index.html');
+})
 
 // app.get('/',(req, res) => {
 
