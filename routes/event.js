@@ -23,9 +23,9 @@ host + /api/event
 
 const router = Router();
 
-    router.use(validarJWT);
+    router.use(validarJWT); // se aplica para todos
 
-router.get('/', validarJWT
+router.get('/'
     , getEventos);
 
 router.post('/', [
@@ -44,7 +44,7 @@ router.put('/:id',[
     ]
     , actualizarEvento);
 
-    router.delete('/:id', validarJWT
+    router.delete('/:id'
     , eliminarEvento);
 
 
